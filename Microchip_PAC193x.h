@@ -462,6 +462,12 @@ class Microchip_PAC193x {
 			uint16_t VoltageRaw4; //vbus
 			float Voltage4;
 			uint16_t VsenseRaw; //vsense
+
+			uint16_t VsenseRaw1; //vsense
+			uint16_t VsenseRaw2; //vsense
+			uint16_t VsenseRaw3; //vsense
+			uint16_t VsenseRaw4; //vsense
+
 			float Vsense;
 			float Vsense1;
 			float Vsense2;

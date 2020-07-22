@@ -237,7 +237,16 @@ int16_t Microchip_PAC193x::UpdateVsenseRaw(){
 	delay(2);
 	VsenseRaw = Read16(PAC1934_VSENSE1_ADDR);
 	VsenseRaw = (VsenseRaw << 8) | (VsenseRaw >> 8 );
-		
+
+	VsenseRaw1 = Read16(PAC1934_VSENSE1_ADDR);
+	VsenseRaw1 = (VsenseRaw1 << 8) | (VsenseRaw1 >> 8);
+	VsenseRaw2 = Read16(PAC1934_VSENSE2_ADDR);
+	VsenseRaw2 = (VsenseRaw2 << 8) | (VsenseRaw2 >> 8);
+	VsenseRaw3 = Read16(PAC1934_VSENSE3_ADDR);
+	VsenseRaw3 = (VsenseRaw3 << 8) | (VsenseRaw3 >> 8);
+	VsenseRaw4 = Read16(PAC1934_VSENSE4_ADDR);
+	VsenseRaw4 = (VsenseRaw4 << 8) | (VsenseRaw4 >> 8);
+
 	return errorCode;
 }
 
@@ -248,9 +257,19 @@ int16_t Microchip_PAC193x::UpdateVsense(){
 	errorCode = 0;
 	UpdateVsenseRaw();
 	VsenseLsb = 100 / 65536.0;
-    Vsense = (float)VsenseRaw;       
-    Vsense = Vsense * VsenseLsb; 
 	
+    Vsense = (float)VsenseRaw;       
+    Vsense = Vsense * VsenseLsb;
+
+	Vsense1 = (float)VsenseRaw1;
+	Vsense1 = Vsense1 * VsenseLsb;
+	Vsense2 = (float)VsenseRaw2;
+	Vsense2 = Vsense2 * VsenseLsb;
+	Vsense3 = (float)VsenseRaw3;
+	Vsense3 = Vsense3 * VsenseLsb;
+	Vsense4 = (float)VsenseRaw4;
+	Vsense4 = Vsense4 * VsenseLsb;
+
 	return errorCode;
 }
 

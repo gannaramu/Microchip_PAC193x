@@ -63,21 +63,25 @@ void loop() {
   PAC.UpdateVoltage();
   SerialUSB.print(PAC.Voltage1);
   SerialUSB.print("\n Voltage2    (mV) = ");
-  PAC.UpdateVoltage();
   SerialUSB.print(PAC.Voltage2);
   SerialUSB.print("\n Voltage3    (mV) = ");
-  PAC.UpdateVoltage();
   SerialUSB.print(PAC.Voltage3);
   SerialUSB.print("\n Voltage4    (mV) = ");
-  PAC.UpdateVoltage();
   SerialUSB.print(PAC.Voltage4);
 
 
 
 
-  //    SerialUSB.print("\n Vsense     (mV) = ");
-  //    PAC.UpdateVsense();
-  //    SerialUSB.print(PAC.Vsense,6);
+      
+      PAC.UpdateVsense();
+      SerialUSB.print("\n Vsense1     (mV) = ");
+      SerialUSB.print(PAC.Vsense1,6);
+      SerialUSB.print("\n Vsense2     (mV) = ");
+      SerialUSB.print(PAC.Vsense2,6);
+      SerialUSB.print("\n Vsense3     (mV) = ");
+      SerialUSB.print(PAC.Vsense3,6);
+      SerialUSB.print("\n Vsense4     (mV) = ");
+      SerialUSB.print(PAC.Vsense4,6);
   //    SerialUSB.print("\n Current    (mA) = ");
   //    PAC.UpdateCurrent();
   //    SerialUSB.print(PAC.Current,6);
