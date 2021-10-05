@@ -1,4 +1,4 @@
-# PAC193x_Arduino_Library
+# Microchip_PAC193x Arduino_Library
 
 This library is a fork from: http://ww1.microchip.com/downloads/en/DeviceDoc/PAC193x_Arduino_Library_v1_0_0.zip which only supports 1 channel
 
